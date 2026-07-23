@@ -14,7 +14,10 @@ The application allows users to authenticate using JWT tokens and perform comple
 ### 2. Dashboard Analytics & Task Cards (Dark Mode)
 ![Dark Mode Dashboard](docs/screenshots/dashboard_dark.png)
 
-### 3. Light Mode & Dynamic Filter State
+### 3. Task Creation & Editing Modal (Form Validation)
+![Task Form Modal](docs/screenshots/task_modal.png)
+
+### 4. Light Mode & Dynamic Filter State
 ![Light Mode Dashboard](docs/screenshots/dashboard_light.png)
 
 ---
