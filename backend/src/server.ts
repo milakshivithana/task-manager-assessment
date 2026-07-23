@@ -23,13 +23,18 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// Initialize Database & Start Server if not imported by test suite
-if (process.env.NODE_ENV !== 'test') {
-  db.initialize().then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
-  }).catch((err) => {
-    console.error('Failed to initialize database:', err);
+// Initialize Database without blocking the export for Vercel
+db.initialize().catch((err) => {
+  console.error('Failed to initialize database:', err);
+});
+
+// Local machine eke nam (nattam testing nemei nam) witharak port eke listen karanna
+// process.env.VERCEL kiyanne Vercel eken auto dena variable ekak
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
   });
 }
+
+// Vercel ekata deploy karaddi app eka export karanna one
+export default app;
