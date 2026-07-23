@@ -6,6 +6,19 @@ The application allows users to authenticate using JWT tokens and perform comple
 
 ---
 
+## Application Screenshots & UI Preview
+
+### 1. User Authentication (Login Page)
+![Login Page](docs/screenshots/login_page.png)
+
+### 2. Dashboard Analytics & Task Cards (Dark Mode)
+![Dark Mode Dashboard](docs/screenshots/dashboard_dark.png)
+
+### 3. Light Mode & Dynamic Filter State
+![Light Mode Dashboard](docs/screenshots/dashboard_light.png)
+
+---
+
 ## Technology Stack
 
 ### Frontend
@@ -63,6 +76,8 @@ task-manager-assessment/
 ├── database/
 │   ├── schema.sql            # PostgreSQL / MySQL DDL creation script
 │   └── seed.sql              # Initial admin & sample task seed script
+├── docs/
+│   └── screenshots/          # Application UI screenshots
 ├── docker-compose.yml        # Container orchestration (Postgres, Backend, Frontend)
 ├── .gitignore
 └── README.md
@@ -191,5 +206,5 @@ npm run dev
 ## Submission Checklist
 - [x] GitHub Repository clean commit history
 - [x] Database Schema & Seed files (`database/schema.sql`, `database/seed.sql`)
-- [x] Full `README.md`
+- [x] Full `README.md` with UI Screenshots
 - [x] Environment template (`backend/.env.example`)
